@@ -4,45 +4,13 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="color.js"></script>
 </head>
-<script type="text/javascript">
 
-var body = {
-  setColor : function(color){
-    document.querySelector('body').style.color = color;
-  },
-  setBackgroudColor : function(color){
-    document.querySelector('body').style.backgroundColor = color;
-  }
-}
-
-var links = {
-  setColor : function(color){
-    var aTagList = document.querySelectorAll('a');
-    for(var i = 0; i < aTagList.length; i++){
-        aTagList[i].style.color = color;
-      }
-  }
-}
-
-function nightButtonHandler(self){    
-    var aTagColor = '';
-    if(self.value === 'night'){
-      body.setBackgroudColor('black');
-      body.setColor('white');
-      self.value = 'day';
-      links.setColor('powderblue');
-    }else{      
-      body.setBackgroudColor('white');
-      body.setColor('black');
-      self.value = 'night'
-      links.setColor('blue');
-    }  
-}   
-</script>
-<body>
-  <input type='button' value='night' onclick="nightButtonHandler(this)">
+<body>  
   <h1><a href="index.html">WEB</a></h1>
+  <input type='button' value='night' onclick="nightButtonHandler(this)">
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
