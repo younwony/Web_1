@@ -6,14 +6,26 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <button value="night" type="button" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    ">night</button>
-  <button value="right" type="button" onclick="
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
-  ">white</button>
+  <input type='button' value='night' onclick="
+    var target = document.querySelector('body');
+    var aTagList = document.querySelectorAll('a');
+    var aTagColor = '';
+    if(this.value === 'night'){
+      aTagColor = 'powderblue';
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+    }else{
+      aTagColor = 'blue';
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night'
+    }
+
+    for(var i = 0; i < aTagList.length; i++){
+        aTagList[i].style.color = aTagColor;
+      }
+  ">
   <h1><a href="index.html">WEB</a></h1>
   <ol>
     <li><a href="1.html">HTML</a></li>
