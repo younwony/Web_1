@@ -70,18 +70,36 @@ li{
     padding: 10px 15px;
 }
 
-.HeaderToBody{
-    padding: 10px 50px;
-    background-color: #666;
+.HeaderToBody{    
+    padding : 10px 12%;
+    background-color: #ddd;
     font-size: 0.7rem;
+    text-align: left;    
+    color: #666;
+}
+.MainBody{    
+    background-color: white;    
 }
 
 .MainBodyContent{
-    padding: 10px 100px;
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    margin: 0px 100px;
+    padding : 50px;
     height: 500px;
-    border: 1px solid;
-    background-color: #eee;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: white;
     color: black;
+}
+
+.ImgTitle{
+    padding : 30px;
+}
+
+.MainBodyContentText{
+    text-align: left;
 }
 
     </style>
@@ -131,17 +149,18 @@ li{
             </ul>
         </div>
     </div>
+    <div class="HeaderToBody">생활코딩</div>
     <div class="MainBody">
-        <div class="HeaderToBody">생활코딩</div>
         <div class="MainBodyContent">
             <img alt="" height="150" src="https://s3-ap-northeast-2.amazonaws.com/opentutorials-user-file/course/1/5641.png" width="150" class="thumbnail">
-            <div>
+            <div class="ImgTitle">hello world</div>          
+            <div class="MainBodyContentText">
                 생활코딩의 세계에 오신 것을 환영합니다. 생활코딩은 
                 <strong>일반인들에게 프로그래밍을 알려주는 무료 온라인, 오프라인 수업입니다.</strong>
                 어떻게 공부할 것인가를 생각해보기 전에 왜 프로그래밍을 공부하는 이유에 대한 이유를 함께 생각해보면 좋을 것 같습니다. 아래 영상을 한번 보시죠.    
             </div>
-            
-        </div>
+            <div style='background-image: url("https://i.ytimg.com/vi_webp/1ttLx9MbrCI/maxresdefault.webp");'></div>
+        </div>     
     </div>
 </body>
 </html>
